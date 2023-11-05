@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="utf-8">
+	<title>圖像延遲載入畫面範例</title>
+<style>
+body {
+	text-align:center;
+}
+img#img-stage {
+	background:url(img/loading.gif) no-repeat center center;
+	background-size:20px;
+}
+section {
+	margin-bottom:40px;
+}
+section > div {
+	margin-top:20px;
+}
+button {
+	cursor:pointer;5
+}
+#img-stage2-parent {
+	display:inline-block;
+	background:url(img/loading.gif) no-repeat center center;
+	background-size:20px;
+}
+</style>
+</head>
+<body>
+<article>
+	<h1>圖像延遲載入畫面範例</h1>
+	<section>
+		<h1>作為 img 標籤的背景</h1>
+		<img id="img-stage" width="400" height="300" alt="">
+		<div>
+			<button id="img-load">讀入圖像</button>
+		</div>
+	</section>
+	<section>
+		<h1>作為 img 標籤的元素的背景</h1>
+		<div id="img-stage2-parent">
+			<img id="img-stage2" width="400" height="300" alt="">
+		</div>
+		<div>
+			<button id="img-load2">讀入圖像</button>
+		</div>
+	</section>
+</article>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script>
+(function(){
+	$(document).on("click","#img-load",function(){
+		$("#img-stage").attr("src","img/photo.jpg");
+	});
+	$(document).on("click","#img-load2",function(){
+		$("#img-stage2")
+			.css({opacity:0})
+			.attr("src","img/photo2.jpg")
+			.animate({opacity:1},1000);
+	});
+})();
+</script>
+</body>
+</html>

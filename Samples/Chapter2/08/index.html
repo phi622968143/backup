@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <title>image effect</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ui-darkness/jquery-ui-1.10.4.custom.min.css">
+</head>
+<body>
+
+<div id="contentArea">
+    <div class="toolsArea">
+        <h2 class="ttlContents">選擇檔案：</h2>
+        <div class="btn-file">
+           選擇檔案
+            <input type="file" id="upload">
+        </div>
+
+        <!-- 文字輸入 -->
+        <h2 class="ttlContents">效果：</h2>
+        <ul class="inputRadioArea clearfix">
+            <li><input type="radio" name="effect" value="reset" id="reset" /><label for="reset">重設</label></li>
+            <li><input type="radio" name="effect" value="monochrome" id="monochrome" /><label for="monochrome">單色</label></li>
+            <li><input type="radio" name="effect" value="sepia" id="sepia" /><label for="sepia">懷舊</label></li>
+            <li><input type="radio" name="effect" value="reverse" id="reverse" /><label for="reverse">負沖</label></li>
+        </ul>
+
+        <h2 class="ttlContents">亮度：</h2>
+        <div id="briteness"></div>
+    <!-- /.toolArea -->
+    </div>
+
+    <!-- 描繪用的canvas -->
+    <div id="viewArea">
+        <canvas id="fileCv" class="effectViewCv"></canvas>
+    </div>
+
+    <!-- 儲存圖像 -->
+    <button id="save" class="btnSave">儲存檔案</button>
+
+</div>
+
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.min.js"></script>
+<script type='text/javascript'>
+    $(document).ready(function() {
+      $("#briteness").slider({
+          value: 0, //初始值
+          min: -1,
+          max: 1,
+          step: 0.01
+      });
+    });
+</script>
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>

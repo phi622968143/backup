@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+xmlns:gap = "http://phonegap.com/ns/1.0"
+id        = "com.phonegap.example"
+versionCode="10" 
+version   = "1.0.0">
+
+<!-- versionCode is optional and Android only -->
+
+<name>應用程式的名稱</name>
+
+<description>
+應用程式的說明
+</description>
+
+<author href="製作者 URL" email="製作者 e-mail">
+製作者名稱 
+</author>
+
+<!-- 平台 Build 的選擇 -->
+<gap:platform name="ios" />
+<gap:platform name="android" />
+
+<!-- 使用之 PhoneGap 的版本 -->
+<preference name="phonegap-version" value="3.1.0" />
+
+<!-- 裝置的方向：可指定的值在 default landscape portrait
+ default 當中，橫（landscape）與縱（portrait）兩者有效 -->
+<preference name="orientation" value="portrait" />
+
+<!-- 以 true / false 設定是否為全螢幕
+隱藏上方的狀態列。預設為 false -->
+<preference name="fullscreen" value="true" />
+
+</widget>

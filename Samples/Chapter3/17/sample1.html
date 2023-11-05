@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Sample1 | Responsive Navigation</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+<!-- ▼從 google fonts 讀入網路字型 -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Marcellus">
+<!-- ▼圖示字型（網路字型「font-awesome」）用的 CSS -->
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<!-- ▼修正各瀏覽器樣式差異之 CSS -->
+<link rel="stylesheet" href="css/normalize.css">
+<!-- ▼本次範例的 CSS -->
+<link rel="stylesheet" href="css/style1.css">
+
+<!-- ▼使控制各瀏覽器動作差異更為簡易的Javascript -->
+<script src="js/modernizr-2.6.2.min.js"></script>
+</head>
+<body>
+
+<header role="banner" id="headerContainer">
+<div id="headerContainer_inner" class="inner">
+
+<div id="siteID">
+<h1>Moony Interactive</h1>
+<p class="description">響應式導覽列範例</p>
+</div>
+<!--/ siteID -->
+
+</div>
+<!--/ headerContainer_inner END -->
+
+<nav role="navigation" id="mainNavigation">
+<ul class="inner clearfix">
+<li class="current"><a href="#" title="HOME"><span class="fa fa-home"><span>HOME</span></span></a></li>
+<li><a href="news/" title="NEWS"><span class="fa fa-file-text-o"><span>NEWS</span></span></a>
+  <ul>
+  <li><a href="#" title="INFO">INFO</a></li>
+  <li><a href="#" title="EVENT">EVENT</a></li>
+  </ul>
+</li>
+<li><a href="#" title="PROFILE"><span class="fa fa-user"><span>PROFILE</span></span></a></li>
+<li><a href="#" title="GALLERY"><span class="fa fa-th-large"><span>GALLERY</span></span></a></li>
+<li><a href="#" title="ACCESS"><span class="fa fa-map-marker"><span>ACCESS</span></span></a></li>
+<li><a href="#" title="CONTACT"><span class="fa fa-envelope-o"><span>CONTACT</span></span></a></li>
+</ul>
+</nav>
+
+</header>
+<!--/ headerContainer -->
+
+<div id="mainVisualContainer">
+<div class="inner">
+<img src="img/img_mainvisual.jpg" alt="">
+</div>
+</div>
+<!--/ mainVisualContainer -->
+
+<section id="contentContainer" class="inner">
+<div id="contentContainer_inner">
+<h1>Sample1 沒有搜尋窗格或SNS按鈕。只有 logo 的簡單的形式，單純使導覽列在橫向上折返</h1>
+</div>
+</section>
+<!--/contentContainer -->
+
+<footer id="footerContainer">
+<div class="inner">
+<p id="copyright">Copyright&copy; Moony All Rights Reserved.</p>
+</div>
+</footer>
+<!--/ footerContainer -->
+
+<!-- ▼從 CDN 讀取 jQuery，但仍準備備案使得即便在本機也能讀取 -->
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+<!-- ▼即使在舊版 IE 等選擇器實作不完全的老舊瀏覽器中也能利用虛擬選擇器的 Javascript -->
+<script src="js/selectivizr-min.js"></script>
+<!-- ▼本次範例的 Javascript -->
+<script src="js/script1.js"></script>
+</body>
+</html>
